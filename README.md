@@ -1,6 +1,6 @@
 # Lava Rising Datapack for Minecraft 1.17
 
-A lightweight and easy-to-use datapack that makes the lava rise from the bottom of the world to the top, forcing players to build up and attack, or get engulfed by the lava. You have one life, once you die, you're out and left to spectate the game. The last player remaining wins!
+Battle it out in the well-known challenge of Minecraft, but the Lava Rises. Get time to prepare in the beginning stages before lava begins to engulf the world from the bottom to the top, who will come out victorious in the final battle?
 
 **Video showcasing the pack in action:**
 
