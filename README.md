@@ -1,4 +1,4 @@
-# Lava Rising Datapack for Minecraft 1.17
+# Lava Rising Datapack for Minecraft 1.17-1.18
 
 Battle it out in the well-known challenge of Minecraft, but the Lava Rises. Get time to prepare in the beginning stages before lava begins to engulf the world from the bottom to the top, who will come out victorious in the final battle?
 
