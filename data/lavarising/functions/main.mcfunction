@@ -26,8 +26,8 @@ scoreboard objectives setdisplay sidebar.team.aqua blue_team
 scoreboard objectives setdisplay sidebar.team.green green_team
 
 # Teams
-execute if score enable_teams global matches 1 run function waterrising:teams_mode
-execute if score enable_teams global matches 0 run function waterrising:solos_mode
+execute if score enable_teams global matches 1 run function lavarising:teams_mode
+execute if score enable_teams global matches 0 run function lavarising:solos_mode
 
 kill @e[type=falling_block]
 

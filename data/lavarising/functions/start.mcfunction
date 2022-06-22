@@ -1,5 +1,8 @@
 kill @e[tag=riser]
-execute unless entity @e[tag=riser] run summon armor_stand 0 -64 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["riser"]}
+## 1.18
+execute unless score legacy global matches 1.. unless entity @e[tag=riser] run summon armor_stand 0 -64 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["riser"]}
+## 1.17
+execute if score legacy global matches 1.. unless entity @e[tag=riser] run summon armor_stand 0 0 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["riser"]}
 
 scoreboard players set time time 0
 scoreboard players set time_seconds time 0
