@@ -12,6 +12,9 @@ scoreboard players set grace_period time 2500
 scoreboard players set height_limit global 1
 scoreboard players set sound_effects global 1
 
+# 1.17 switch
+scoreboard players set legacy global 0
+
 # Teams
 scoreboard players set enable_teams global 0
 scoreboard players set 3v3v3 global 0
