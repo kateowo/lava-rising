@@ -26,11 +26,11 @@ execute if score period time matches -1 run bossbar set lavarising:period name "
 
 execute if score period time matches 0 store result bossbar lavarising:period max run scoreboard players get starter_period time
 execute if score period time matches 0 run bossbar set lavarising:period color yellow
-execute if score period time matches 0 run bossbar set lavarising:period name [{"text":"It is now the ","color":"white","bold":false},{"text":"starter period","color":"yellow","bold":true},{"text":" [","color":"white","bold":false},{"score":{"name":"time_seconds","objective":"time"},"color":"yellow","bold":true},{"text":"/","color":"gold","bold":false},{"score":{"name":"starter_period","objective":"global"},"color":"yellow","bold":false},{"text":"]","color":"white","bold":false}]
+execute if score period time matches 0 run bossbar set lavarising:period name [{"text":"It is now the ","color":"white","bold":false},{"text":"starter period","color":"yellow","bold":true},{"text":" [","color":"white","bold":false},{"score":{"name":"time_seconds","objective":"time"},"color":"yellow","bold":true},{"text":"/","color":"gold","bold":false},{"score":{"name":"starter_period","objective":"time"},"color":"yellow","bold":false},{"text":"]","color":"white","bold":false}]
 
 execute if score period time matches 1 store result bossbar lavarising:period max run scoreboard players get grace_period time
 execute if score period time matches 1 run bossbar set lavarising:period color green
-execute if score period time matches 1 run bossbar set lavarising:period name [{"text":"It is now the ","color":"white","bold":false},{"text":"grace period","color":"green","bold":true},{"text":" [","color":"white","bold":false},{"score":{"name":"time_seconds","objective":"time"},"color":"green","bold":true},{"text":"/","color":"dark_green","bold":false},{"score":{"name":"grace_period","objective":"global"},"color":"green","bold":false},{"text":"]","color":"white","bold":false}]
+execute if score period time matches 1 run bossbar set lavarising:period name [{"text":"It is now the ","color":"white","bold":false},{"text":"grace period","color":"green","bold":true},{"text":" [","color":"white","bold":false},{"score":{"name":"time_seconds","objective":"time"},"color":"green","bold":true},{"text":"/","color":"dark_green","bold":false},{"score":{"name":"grace_period","objective":"time"},"color":"green","bold":false},{"text":"]","color":"white","bold":false}]
 
 execute if score period time matches 2 run bossbar set lavarising:period color red
 ## 1.18
