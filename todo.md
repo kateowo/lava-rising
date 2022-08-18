@@ -9,3 +9,9 @@
 
 - [ ] implement time periods
 - - [ ] implement `last_login`
+
+- [ ] implement teams
+
+- [ ] implement performance improvements (optional)
+
+- [ ] implement setup flow
