@@ -4,6 +4,10 @@
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 
+# bossbar
+bossbar add lavarising:main ""
+bossbar set lavarising:main color red
+
 # track deaths
 scoreboard objectives add player.death dummy
 
