@@ -1,1 +1,0 @@
-execute if score alive alive_players matches ..1 if score period time matches 2 run function lavarising:victory
