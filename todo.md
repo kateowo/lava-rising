@@ -3,14 +3,14 @@
 ### core systems
 
 - [ ] implement riser
-- [ ] implement timer *p!f*
-- [ ] implement start flow
+- [x] implement timer *p!f*
+- [x] implement start flow
 - [ ] implement win flow
 
 - [ ] implement time periods
 - - [ ] implement `last_login`
 
-- [ ] implement teams
+- [x] implement teams
 
 - [ ] implement performance improvements (optional)
 
