@@ -1,0 +1,15 @@
+# LAVARISING period
+## grace -> main
+
+
+scoreboard players set period internal 2
+scoreboard players set time internal 0
+scoreboard players set time_s internal 0
+
+# announce
+title @a title ["",{"text":"LAVA RISING","color":"red","bold":true}]
+title @a subtitle "The lava has begun rising!"
+tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"The lava has begun rising!","color":"yellow"}]
+# sfx
+execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 100 0.8
+execute as @a at @s run playsound entity.lightning_bolt.impact player @s ~ ~ ~

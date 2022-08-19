@@ -13,6 +13,12 @@ effect clear @a
 gamemode adventure @a[team=!spectator]
 
 
+# periods
+## starter period (1m)
+scoreboard players set starter_period global 60
+## grace period (30m)
+scoreboard players set grace_period global 1800
+
 # rise ticks
 ## interval between rising
 scoreboard players set rise_ticks global 20
