@@ -4,6 +4,7 @@
 
 # remove tags
 tag @a remove win
+effect clear @a
 
 # announce
 title @a title ["",{"text":"LAVA RISING","color":"red","bold":true}]
