@@ -13,6 +13,10 @@ effect clear @a
 gamemode adventure @a[team=!spectator]
 
 
+# rise ticks
+## interval between rising
+scoreboard players set rise_ticks global 20
+
 # teams
 scoreboard players set teams global 0
 scoreboard players set teams_count global 2
