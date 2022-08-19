@@ -6,6 +6,10 @@ scoreboard players set period internal 2
 scoreboard players set time internal 0
 scoreboard players set time_s internal 0
 
+# count players
+scoreboard players set alive internal 0
+execute as @a[gamemode=survival] run scoreboard players add alive internal 1
+
 # announce
 title @a title ["",{"text":"LAVA RISING","color":"red","bold":true}]
 title @a subtitle "The lava has begun rising!"
