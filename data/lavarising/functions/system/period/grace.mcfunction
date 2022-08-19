@@ -11,3 +11,6 @@ tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"!","color":"red","bold"
 # sfx
 execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 100 0.8
 execute as @a at @s run playsound entity.arrow.hit_player player @s ~ ~ ~ 100 0.2
+
+# world
+worldborder set 160 1750
