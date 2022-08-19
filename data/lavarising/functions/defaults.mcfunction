@@ -30,6 +30,10 @@ scoreboard players set teams_count global 2
 # sfx
 scoreboard players set sfx global 1
 
+# performance
+## disabled by default
+scoreboard players set kill_falling_blocks global 0
+
 # clear illegal blocks
 ## #lavarising:illegal
 ## ~3 blocks from the riser

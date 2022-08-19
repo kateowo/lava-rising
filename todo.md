@@ -12,6 +12,6 @@
 
 - [x] implement teams
 
-- [ ] implement performance improvements (optional)
+- [x] implement performance improvements (optional)
 
 - [ ] implement setup flow
