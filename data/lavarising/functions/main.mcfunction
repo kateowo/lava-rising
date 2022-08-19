@@ -2,7 +2,7 @@
 
 
 # performance
-execute if score kill_falling_blocks global matches 1.. run kill @e[type=falling_block]
+execute if score period internal matches 2 if score kill_falling_blocks global matches 1.. run kill @e[type=falling_block]
 
 # riser main
 execute if score period internal matches 2 as @e[tag=riser,limit=1] at @s run function lavarising:system/riser/main
