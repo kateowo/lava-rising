@@ -31,8 +31,10 @@ scoreboard players set teams_count global 2
 scoreboard players set sfx global 1
 
 # performance
-## disabled by default
-scoreboard players set kill_falling_blocks global 0
+## kill nearby falling blocks
+scoreboard players set kill_nearby_falling_blocks global 1
+## drastic, kills ALL falling blocks
+scoreboard players set kill_all_falling_blocks global 0
 
 # clear illegal blocks
 ## #lavarising:illegal

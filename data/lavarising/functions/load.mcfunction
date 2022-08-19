@@ -4,6 +4,9 @@
 scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 
+# kill nearby falling blocks
+scoreboard objectives add falling_blocks dummy
+
 # bossbar
 bossbar add lavarising:main ""
 bossbar set lavarising:main color red
