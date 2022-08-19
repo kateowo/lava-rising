@@ -14,4 +14,4 @@
 
 - [x] implement performance improvements (optional)
 
-- [ ] implement setup flow
+- [x] implement setup flow

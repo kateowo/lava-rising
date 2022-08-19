@@ -9,6 +9,12 @@ execute if score cut_clean global matches 1.. run function lavarising:extras/cut
 execute if score speed_uhc global matches 1.. run function lavarising:extras/speed_uhc
 execute if score speed_uhc global matches 1.. if score patch_grindstone_exploit global matches 1.. run function lavarising:extras/grindstone
 
+# periods range checks
+## starter period
+execute unless score starter_period global matches 10.. run scoreboard players set starter_period global 10
+## grace period
+execute unless score grace_period global matches 1200.. run scoreboard players set grace_period global 1200
+
 # performance
 execute if score period internal matches 2 if score kill_all_falling_blocks global matches 1.. run kill @e[type=falling_block]
 # kill nearby falling blocks
