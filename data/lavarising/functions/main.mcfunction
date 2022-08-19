@@ -1,6 +1,14 @@
 # LAVARISING main loop
 
 
+# world
+bossbar set lavarising:main players @a
+
+# options
+execute if score cut_clean global matches 1.. run function lavarising:extras/cut_clean
+execute if score speed_uhc global matches 1.. run function lavarising:extras/speed_uhc
+execute if score speed_uhc global matches 1.. if score patch_grindstone_exploit global matches 1.. run function lavarising:extras/grindstone
+
 # performance
 execute if score period internal matches 2 if score kill_all_falling_blocks global matches 1.. run kill @e[type=falling_block]
 # kill nearby falling blocks

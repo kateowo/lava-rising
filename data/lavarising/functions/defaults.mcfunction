@@ -5,7 +5,11 @@
 scoreboard players set period internal -1
 
 # extras
-## TODO: add cut clean & speed uhc
+scoreboard players set cut_clean global 1
+scoreboard players set speed_uhc global 1
+
+# patch grindstone exploit
+scoreboard players set patch_grindstone_exploit global 1
 
 # world
 worldborder set 10
