@@ -27,7 +27,7 @@
 ### publish
 based on testing
 
-- [ ] actually summon riser entity
+- [x] actually summon riser entity
 - [ ] implement x seconds left countdown
 - [ ] trim starting title on game start
 - [x] ensure "pvp has been enabled" message does not repeat
