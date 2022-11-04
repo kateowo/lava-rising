@@ -1,6 +1,9 @@
 # LAVARISING main loop
 
 
+# setup
+execute as @a unless score setup internal matches 1.. run function lavarising:setup/go
+
 # world
 bossbar set lavarising:main players @a
 
