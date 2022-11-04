@@ -23,3 +23,11 @@
 
 - [ ] implement `legacy` switch for pre-1.18
   - this is still something i want to support as it means the datapack will be more widely accessible, pretty important considering this is the only lava rising datapack on PMC (last time i checked)
+
+### publish
+based on testing
+
+- [ ] implement x seconds left countdown
+- [ ] trim starting title on game start
+- [ ] ensure "pvp has been enabled" message does not repeat
+  - issue with periods?
