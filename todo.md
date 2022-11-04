@@ -27,7 +27,11 @@
 ### publish
 based on testing
 
+- [ ] actually summon riser entity
 - [ ] implement x seconds left countdown
 - [ ] trim starting title on game start
-- [ ] ensure "pvp has been enabled" message does not repeat
+- [x] ensure "pvp has been enabled" message does not repeat
   - issue with periods?
+- [ ] check performance on server (not great locally)
+  - could add an option to use the previous area for performance?
+- [ ] fix winning checks just not working
