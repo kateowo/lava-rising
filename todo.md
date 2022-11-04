@@ -10,9 +10,12 @@
 - [ ] implement height limit
 
 - [x] implement time periods
-- - [ ] implement `last_login`
+- - [x] implement `last_login`
 
-- [x] implement teams
+- [ ] implement teams
+- - [x] create actual teams
+- - [ ] support winning for teams
+- - [ ] announce team elimination?
 
 - [x] implement performance improvements (optional)
 
