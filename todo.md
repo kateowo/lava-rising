@@ -21,7 +21,7 @@
 
 - [x] implement setup flow
 
-- [ ] implement `legacy` switch for pre-1.18
+- [x] implement `legacy` switch for pre-1.18
   - this is still something i want to support as it means the datapack will be more widely accessible, pretty important considering this is the only lava rising datapack on PMC (last time i checked)
 
 ### publish

@@ -14,6 +14,8 @@ execute if score speed_uhc global matches 1.. if score patch_grindstone_exploit 
 execute unless score starter_period global matches 10.. run scoreboard players set starter_period global 10
 ## grace period
 execute unless score grace_period global matches 1200.. run scoreboard players set grace_period global 1200
+## rise height limit
+execute if score legacy global matches 1.. if score rise_height_limit global matches 256.. run function lavarising:setup/range/rise_height_limit
 
 # performance
 execute if score period internal matches 2 if score kill_all_falling_blocks global matches 1.. run kill @e[type=falling_block]

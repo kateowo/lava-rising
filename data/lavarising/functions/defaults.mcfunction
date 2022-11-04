@@ -50,5 +50,9 @@ scoreboard players set kill_all_falling_blocks global 0
 ## ~3 blocks from the riser
 scoreboard players set clear_illegal_blocks global 1
 
+# legacy mode
+## resets some values to support pre-1.18
+scoreboard players set legacy global 0
+
 
 scoreboard players set defaults internal 1
