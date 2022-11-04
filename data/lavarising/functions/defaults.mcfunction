@@ -29,7 +29,8 @@ scoreboard players set rise_height_limit global 310
 
 # rise ticks
 ## interval between rising
-scoreboard players set rise_ticks global 100
+## lower than before due to starting at -64
+scoreboard players set rise_ticks global 80
 
 # teams
 scoreboard players set teams global 0
