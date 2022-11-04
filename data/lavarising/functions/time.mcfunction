@@ -5,9 +5,9 @@ execute if score period internal matches 0..2 run function fm:clock
 
 # periods
 ## starter period
-execute if score time_s internal >= starter_period global run function lavarising:system/period/grace
+execute if score period internal matches 0 if score time_s internal >= starter_period global run function lavarising:system/period/grace
 ## grace period
-execute if score time_s internal >= grace_period global run function lavarising:system/period/main
+execute if score period internal matches 1 if score time_s internal >= grace_period global run function lavarising:system/period/main
 
 ## TODO: calculate time left (`time_left`)
 ## to display in bossbar
