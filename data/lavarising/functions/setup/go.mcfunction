@@ -40,6 +40,12 @@ execute if score speed_uhc global matches 1.. run tellraw @s ["",{"text":"Speed 
 ## disabled
 execute unless score speed_uhc global matches 1.. run tellraw @s ["",{"text":"Speed UHC \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Automatically enchants tools with efficiency."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/speed_uhc/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
 
+# legacy mode
+## enabled
+execute if score legacy global matches 1.. run tellraw @s ["",{"text":"Legacy mode (pre-1.18) \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Reverts the height limit and spawn height down to pre-1.18 values."}]}},{"text":"[","color":"white"},{"text":"✔","color":"green","bold":true},{"text":"]","color":"white"},{"text":"  ","color":"dark_gray"},{"text":"X","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/legacy/off"}},{"text":" ","color":"dark_gray"}]
+## disabled
+execute unless score legacy global matches 1.. run tellraw @s ["",{"text":"Legacy mode (pre-1.18) \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Reverts the height limit and spawn height down to pre-1.18 values."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/legacy/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
+
 ## footer
 tellraw @s ["",{"text":"\nOnce you're ready, run "},{"text":"/function lavarising:start","color":"yellow","underlined":true,"clickEvent":{"action":"run_command","value":"/function lavarising:start"}},{"text":" and let the games begin!\n"}]
 

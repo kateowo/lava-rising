@@ -16,7 +16,7 @@ bossbar set lavarising:main color red
 scoreboard objectives add player.death dummy
 
 # create riser
-summon minecraft:armor_stand 0 0 0 {Tags:["riser"],Invisible:1b,Marker:1b}
+summon minecraft:armor_stand 0 -64 0 {Tags:["riser"],Invisible:1b,Marker:1b}
 
 # teams
 ## red

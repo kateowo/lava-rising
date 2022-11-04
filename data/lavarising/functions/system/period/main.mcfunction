@@ -6,6 +6,10 @@ scoreboard players set period internal 2
 scoreboard players set time internal 0
 scoreboard players set time_s internal 0
 
+# legacy mode
+execute if score legacy global matches 1.. run tp @e[tag=riser,limit=1] 0 0 0
+execute unless score legacy global matches 1.. run tp @e[tag=riser,limit=1] 0 -64 0
+
 # count players
 scoreboard players set alive internal 0
 execute as @a[gamemode=survival] run scoreboard players add alive internal 1
