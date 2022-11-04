@@ -5,6 +5,9 @@ scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 scoreboard objectives add last_login dummy
 
+# numbers
+scoreboard players set 1 internal 1
+
 # kill nearby falling blocks
 scoreboard objectives add falling_blocks dummy
 
