@@ -42,7 +42,7 @@ scoreboard players set kill_nearby_distance global 2
 scoreboard players set kill_all_falling_blocks global 0
 
 # clear illegal blocks
-## #lavarising:illegal
+## stored in #lavarising:illegal
 ## ~3 blocks from the riser
 scoreboard players set clear_illegal_blocks global 1
 

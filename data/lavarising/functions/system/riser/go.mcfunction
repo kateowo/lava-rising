@@ -6,6 +6,9 @@
 tp ~ ~1 ~
 
 # fill area
+## works in 4 quadrants across
+## top-left, top-right, bottom-left, bottom-right
+## to achieve 2x the original area covered
 fill -80 ~ -80 0 ~ 0 lava
 fill 80 ~ -80 0 ~ 0 lava
 fill -80 ~ 80 0 ~ 0 lava
