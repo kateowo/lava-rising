@@ -7,7 +7,7 @@
 - [x] implement start flow
 - [x] implement win flow
 
-- [ ] implement height limit
+- [x] implement height limit
 
 - [x] implement time periods
   - [x] implement `last_login`

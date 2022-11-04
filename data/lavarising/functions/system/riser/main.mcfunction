@@ -15,4 +15,6 @@ execute if score clear_illegal_blocks global matches 1.. run fill 80 ~ 80 0 ~3 ~
 execute store result score riser_height internal run data get entity @s Pos[1]
 
 # timer
-function lavarising:system/riser/time
+## not inclusive to ensure riser does not rise
+## one last time above height limit
+execute if score riser_height internal < rise_height_limit global run function lavarising:system/riser/time

@@ -23,6 +23,10 @@ scoreboard players set starter_period global 60
 ## grace period (30m)
 scoreboard players set grace_period global 1800
 
+# height limit
+## riser will stop at this y level
+scoreboard players set rise_height_limit global 310
+
 # rise ticks
 ## interval between rising
 scoreboard players set rise_ticks global 20
