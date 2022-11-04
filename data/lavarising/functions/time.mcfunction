@@ -24,15 +24,23 @@ execute if score period internal matches -1 run bossbar set lavarising:main colo
 ## starter period (0)
 execute if score period internal matches 0 run bossbar set lavarising:main name ["",{"text":"Starter period \u0020 \u0020","color":"yellow"},{"score":{"name":"time_left","objective":"internal"},"color":"yellow","bold":true},{"text":" seconds left","color":"white"}]
 execute if score period internal matches 0 run bossbar set lavarising:main color yellow
+execute if score period internal matches 0 store result bossbar lavarising:main max run scoreboard players get starter_period global
+execute if score period internal matches 0 store result bossbar lavarising:main value run scoreboard players get time_s internal
 ## grace period (1)
 execute if score period internal matches 1 run bossbar set lavarising:main name ["",{"text":"Grace period \u0020 \u0020","color":"gold"},{"score":{"name":"time_left","objective":"internal"},"color":"gold","bold":true},{"text":" seconds left","color":"white"}]
 execute if score period internal matches 1 run bossbar set lavarising:main color yellow
+execute if score period internal matches 1 store result bossbar lavarising:main max run scoreboard players get grace_period global
+execute if score period internal matches 1 store result bossbar lavarising:main value run scoreboard players get time_s internal
 ## main period (2)
 execute if score period internal matches 2 run bossbar set lavarising:main name ["",{"text":"LAVA RISING \u0020 \u0020","color":"red","bold":true},{"text":"Currently at Y: ","color":"white"},{"score":{"name":"riser_height","objective":"internal"},"color":"red","bold":true}]
 execute if score period internal matches 2 run bossbar set lavarising:main color red
+execute if score period internal matches 2 store result bossbar lavarising:main max run scoreboard players get rise_ticks global
+execute if score period internal matches 2 store result bossbar lavarising:main value run scoreboard players get rise_time internal
 ## win (3)
 execute if score period internal matches 3 run bossbar set lavarising:main name "Game over!"
 execute if score period internal matches 3 run bossbar set lavarising:main color white
+execute if score period internal matches 3 run bossbar set lavarising:main max 1
+execute if score period internal matches 3 run bossbar set lavarising:main value 1
 
 # last login
 ## pre-game (-1)
