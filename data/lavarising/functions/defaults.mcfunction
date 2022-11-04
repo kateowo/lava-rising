@@ -37,6 +37,7 @@ scoreboard players set sfx global 1
 # performance
 ## kill nearby falling blocks
 scoreboard players set kill_nearby_falling_blocks global 1
+scoreboard players set kill_nearby_distance global 2
 ## drastic, kills ALL falling blocks
 scoreboard players set kill_all_falling_blocks global 0
 
