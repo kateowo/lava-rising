@@ -16,6 +16,9 @@ execute if score teams global matches 1.. run tellraw @s ["",{"text":"Teams \u00
 ## disabled
 execute unless score teams global matches 1.. run tellraw @s ["",{"text":"Teams \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Fight to the death together! Requires adding players to red/blue (or green if 3 teams)."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/teams/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
 
+# rise height limit
+tellraw @s ["",{"text":"Rise height limit \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"The maximum height limit the lava can reach."}]}},{"text":" ","color":"white"},{"text":"-","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/rise_height_limit/down"}},{"text":"  ","color":"white"},{"score":{"name":"rise_height_limit","objective":"global"}},{"text":"  ","color":"dark_gray"},{"text":"+","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/rise_height_limit/up"}},{"text":" ","color":"dark_gray"}]
+
 # rise ticks
 tellraw @s ["",{"text":"Rise ticks \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"The interval between the lava rising (in ticks)."}]}},{"text":" ","color":"white"},{"text":"-","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/rise_ticks/down"}},{"text":"  ","color":"white"},{"score":{"name":"rise_ticks","objective":"global"}},{"text":"  ","color":"dark_gray"},{"text":"+","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/rise_ticks/up"}},{"text":" ","color":"dark_gray"}]
 
