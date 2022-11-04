@@ -29,7 +29,7 @@ based on testing
 
 - [x] actually summon riser entity
 - [ ] implement x seconds left countdown
-- [ ] trim starting title on game start
+- [x] trim starting title on game start
 - [x] ensure "pvp has been enabled" message does not repeat
   - issue with periods?
 - [ ] check performance on server (not great locally)
