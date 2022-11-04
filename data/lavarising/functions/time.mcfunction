@@ -9,8 +9,13 @@ execute if score period internal matches 0 if score time_s internal >= starter_p
 ## grace period
 execute if score period internal matches 1 if score time_s internal >= grace_period global run function lavarising:system/period/main
 
-## TODO: calculate time left (`time_left`)
-## to display in bossbar
+# time left
+## starter period (0)
+execute if score period internal matches 0 run scoreboard players operation time_left internal = starter_period global
+execute if score period internal matches 0 run scoreboard players operation time_left internal -= time_s internal
+## grace period (1)
+execute if score period internal matches 1 run scoreboard players operation time_left internal = grace_period global
+execute if score period internal matches 1 run scoreboard players operation time_left internal -= time_s internal
 
 # bossbar
 ## pre-game (-1)

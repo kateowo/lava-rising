@@ -28,7 +28,7 @@
 based on testing
 
 - [x] actually summon riser entity
-- [ ] implement x seconds left countdown
+- [x] implement x seconds left countdown
 - [x] trim starting title on game start
 - [x] ensure "pvp has been enabled" message does not repeat
   - issue with periods?
