@@ -27,11 +27,12 @@
 ### publish
 based on testing
 
+- [ ] clear waterlogged blocks aswell (mainly seaweed things)
 - [x] actually summon riser entity
 - [x] implement x seconds left countdown
 - [x] trim starting title on game start
 - [x] ensure "pvp has been enabled" message does not repeat
   - issue with periods?
-- [ ] check performance on server (not great locally)
+- [x] check performance on server (not great locally)
   - could add an option to use the previous area for performance?
-- [ ] fix winning checks just not working
+- [x] fix winning checks just not working
