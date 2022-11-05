@@ -13,8 +13,8 @@ execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 100 0.8
 execute as @a at @s run playsound entity.arrow.hit_player player @s ~ ~ ~ 100 0.2
 
 # world
-## grace period is between 400 and 899
-execute if score grace_period global matches 400..499 run worldborder set 160 400
+## grace period is below 499
+execute if score grace_period global matches ..499 run worldborder set 160 400
 ## grace period is between 500 and 899
 execute if score grace_period global matches 500..599 run worldborder set 160 500
 ## grace period is between 600 and 899
@@ -45,5 +45,5 @@ execute if score grace_period global matches 1700..1799 run worldborder set 160 
 execute if score grace_period global matches 1800..1899 run worldborder set 160 1800
 ## grace period is between 1900 and 1999
 execute if score grace_period global matches 1900..1999 run worldborder set 160 1900
-## grace period is between 2000 and 2099
-execute if score grace_period global matches 2000..2099 run worldborder set 160 2000
+## grace period is above 2000
+execute if score grace_period global matches 2000.. run worldborder set 160 2000
