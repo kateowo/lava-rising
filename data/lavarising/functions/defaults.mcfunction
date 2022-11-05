@@ -25,7 +25,9 @@ scoreboard players set grace_period global 1800
 
 # height limit
 ## riser will stop at this y level
-scoreboard players set rise_height_limit global 310
+## unlike in previous releases, this is no longer
+## something you can disable
+scoreboard players set rise_height_limit global 316
 
 # rise ticks
 ## interval between rising
