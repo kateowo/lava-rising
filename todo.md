@@ -28,7 +28,7 @@
 based on testing
 
 - [x] death checks STILL DO NOT WORK!!!!!!!
-- [ ] clear waterlogged blocks aswell (mainly seaweed things)
+- [x] clear waterlogged blocks aswell (mainly seaweed things)
 - [x] actually summon riser entity
 - [x] implement x seconds left countdown
 - [x] trim starting title on game start
