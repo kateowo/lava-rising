@@ -13,6 +13,8 @@ execute unless score legacy global matches 1.. run tp @e[tag=riser,limit=1] 0 -6
 # count players
 scoreboard players set alive internal 0
 execute as @a[gamemode=survival] run scoreboard players add alive internal 1
+## debug!
+execute if score debug internal matches 77 run scoreboard players operation alive internal += 1 internal
 
 # announce
 title @a title ["",{"text":"LAVA RISING","color":"red","bold":true}]
