@@ -16,7 +16,7 @@ bossbar add lavarising:main ""
 bossbar set lavarising:main color red
 
 # track deaths
-scoreboard objectives add player.death dummy
+scoreboard objectives add player.death deathCount
 
 # create riser
 summon minecraft:armor_stand 0 -64 0 {Tags:["riser"],Invisible:1b,Marker:1b,Small:1b}
