@@ -1,1 +1,1 @@
-worldborder set 30 1500
+worldborder set 20 1250
