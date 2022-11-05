@@ -23,4 +23,4 @@ execute as @a at @s run playsound block.note_block.pling player @s ~ ~ ~ 100 0.8
 execute as @a at @s run playsound entity.lightning_bolt.impact player @s ~ ~ ~
 
 # world
-worldborder set 30 1500
+schedule function lavarising:system/border/main 120s
