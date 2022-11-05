@@ -9,10 +9,10 @@ tp ~ ~1 ~
 ## works in 4 quadrants across
 ## top-left, top-right, bottom-left, bottom-right
 ## to achieve 2x the original area covered
-fill -80 ~ -80 0 ~ 0 lava
-fill 80 ~ -80 0 ~ 0 lava
-fill -80 ~ 80 0 ~ 0 lava
-fill 80 ~ 80 0 ~ 0 lava
+function lavarising:system/riser/quadrants/0-topleft
+schedule function lavarising:system/riser/quadrants/1-topright 2t
+schedule function lavarising:system/riser/quadrants/2-bottomleft 4t
+schedule function lavarising:system/riser/quadrants/3-bottomright 6t
 
 # announce
 ## pretty redundant, already displayed in the bossbar
