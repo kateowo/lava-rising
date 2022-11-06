@@ -3,6 +3,12 @@
 
 # setup
 execute as @a unless score setup internal matches 1.. run function lavarising:setup/go
+execute if score period internal matches -1 run title @a actionbar ["",{"text":"Configure the game using ","color":"yellow"},{"text":"/trigger setup","color":"gold"},{"text":" before the games begin!","color":"yellow"}]
+## /trigger setup
+scoreboard players enable @a setup
+execute if score period internal matches -1 as @a if score @s setup matches 1.. run function lavarising:setup/go
+execute unless score period internal matches -1 as @a if score @s setup matches 1.. run tellraw @s ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Setup flow can only be opened before the game has started.","color":"red"}]
+execute as @a if score @s setup matches 1.. run scoreboard players reset @s setup
 
 # world
 bossbar set lavarising:main players @a

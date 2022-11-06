@@ -5,6 +5,9 @@ scoreboard objectives add global dummy
 scoreboard objectives add internal dummy
 scoreboard objectives add last_login dummy
 
+# open setup
+scoreboard objectives add setup trigger
+
 # numbers
 scoreboard players set 1 internal 1
 
