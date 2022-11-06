@@ -7,6 +7,9 @@ execute as @a unless score setup internal matches 1.. run function lavarising:se
 # world
 bossbar set lavarising:main players @a
 
+# ensure player is not stuck
+execute if score period internal matches -1 as @a at @s unless block ~ ~1 ~ #lavarising:safe run tp @s ~ ~5 ~
+
 # options
 execute if score cut_clean global matches 1.. run function lavarising:extras/cut_clean
 execute if score speed_uhc global matches 1.. run function lavarising:extras/speed_uhc
