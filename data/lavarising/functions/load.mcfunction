@@ -18,8 +18,11 @@ scoreboard objectives add falling_blocks dummy
 bossbar add lavarising:main ""
 bossbar set lavarising:main color red
 
-# track deaths
+# track player death
 scoreboard objectives add player.death deathCount
+
+# track player leave
+scoreboard objectives add player.leave minecraft.custom:minecraft.leave_game
 
 # create riser
 summon minecraft:armor_stand 0 -64 0 {Tags:["riser"],Invisible:1b,Marker:1b,Small:1b}

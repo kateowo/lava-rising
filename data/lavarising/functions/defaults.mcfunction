@@ -57,5 +57,10 @@ scoreboard players set clear_illegal_blocks global 1
 ## resets some values to support pre-1.18
 scoreboard players set legacy global 0
 
+# eliminate on player disconnect
+## if a player disconnects, they will be permanently
+## eliminated from the game
+scoreboard players set eliminate_on_disconnect global 0
+
 
 scoreboard players set defaults internal 1

@@ -56,3 +56,10 @@ execute if score period internal matches 2 unless score teams global matches 1..
 ## teams
 execute if score period internal matches 2 if score teams global matches 1.. if score teams_count global matches ..2 run function lavarising:system/win/teams-2/check
 execute if score period internal matches 2 if score teams global matches 1.. if score teams_count global matches 3.. run function lavarising:system/win/teams-3/check
+
+# disconnect checks
+## disabled for now
+execute if score eliminate_on_disconnect global matches 1.. run tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"This feature is disabled for now and not available.","color":"red"}]
+execute if score eliminate_on_disconnect global matches 1.. run scoreboard players set eliminate_on_disconnect global 0
+## refer to 'eliminate_on_disconnect' in defaults
+execute if score period internal matches 2 if score eliminate_on_disconnect global matches 1.. if entity @a[scores={player.leave=1..}] run function lavarising:system/death/disconnect
