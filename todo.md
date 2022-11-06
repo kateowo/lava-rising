@@ -12,9 +12,9 @@
 - [x] implement time periods
   - [x] implement `last_login`
 
-- [ ] implement teams
+- [x] implement teams
   - [x] create actual teams
-  - [ ] support winning for teams
+  - [x] support winning for teams
   - [ ] announce team elimination?
 
 - [x] implement performance improvements (optional)
