@@ -15,11 +15,13 @@
 - [x] implement teams
   - [x] create actual teams
   - [x] support winning for teams
-  - [ ] announce team elimination?
+  - [ ] announce team elimination? (new)
 
-- [x] implement performance improvements (optional)
+- [ ] add option to eliminate on player leave (new)
 
-- [x] implement setup flow
+- [x] implement performance improvements (optional) (new)
+
+- [x] implement setup flow (new)
 
 - [x] implement `legacy` switch for pre-1.18
   - this is still something i want to support as it means the datapack will be more widely accessible, pretty important considering this is the only lava rising datapack on PMC (last time i checked)
