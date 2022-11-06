@@ -39,5 +39,8 @@ execute if score period internal matches 2 as @a at @s if score @s player.death 
 execute unless score period internal matches 2 run scoreboard players reset @a player.death
 
 # win checks
-execute if score period internal matches 2 if score alive internal matches ..1 run tag @a[gamemode=survival,limit=1] add win
-execute if score period internal matches 2 if score alive internal matches ..1 run function lavarising:system/win/go
+## solos
+execute if score period internal matches 2 unless score teams global matches 1.. run function lavarising:system/win/solos/check
+## teams
+execute if score period internal matches 2 if score teams global matches 1.. if score teams_count global matches ..2 run function lavarising:system/win/teams-2/check
+execute if score period internal matches 2 if score teams global matches 1.. if score teams_count global matches 3.. run function lavarising:system/win/teams-3/check
