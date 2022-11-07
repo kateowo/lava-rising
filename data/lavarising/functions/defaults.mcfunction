@@ -1,66 +1,66 @@
-# Resets all settings and creates scoreboards
+# LAVARISING defaults
 
-scoreboard players set period time -1
-scoreboard players set @a lastlogin -1
-scoreboard objectives add lastlogin dummy
 
-# Defines scores in the global scoreboard
-scoreboard players set warning_time time 40
-scoreboard players set rising_time time 100
-scoreboard players set starter_period time 300
-scoreboard players set grace_period time 2500
-scoreboard players set height_limit global 1
-scoreboard players set sound_effects global 1
+# general timings
+scoreboard players set period internal -1
 
-# 1.17 switch
+# extras
+scoreboard players set cut_clean global 1
+scoreboard players set speed_uhc global 1
+
+# patch grindstone exploit
+scoreboard players set patch_grindstone_exploit global 1
+
+# world
+worldborder set 10
+effect clear @a
+gamemode adventure @a[team=!spectator]
+
+
+# periods
+## starter period (1m)
+scoreboard players set starter_period global 60
+## grace period (30m)
+scoreboard players set grace_period global 1800
+
+# height limit
+## riser will stop at this y level
+## unlike in previous releases, this is no longer
+## something you can disable
+scoreboard players set rise_height_limit global 316
+
+# rise ticks
+## interval between rising
+## lower than before due to starting at -64
+scoreboard players set rise_ticks global 80
+
+# teams
+scoreboard players set teams global 0
+scoreboard players set teams_count global 2
+
+# sfx
+scoreboard players set sfx global 1
+
+# performance
+## kill nearby falling blocks
+scoreboard players set kill_nearby_falling_blocks global 1
+scoreboard players set kill_nearby_distance global 2
+## drastic, kills ALL falling blocks
+scoreboard players set kill_all_falling_blocks global 0
+
+# clear illegal blocks
+## stored in #lavarising:illegal
+## ~3 blocks from the riser
+scoreboard players set clear_illegal_blocks global 1
+
+# legacy mode
+## resets some values to support pre-1.18
 scoreboard players set legacy global 0
 
-# Teams
-scoreboard players set enable_teams global 0
-scoreboard players set 3v3v3 global 0
+# eliminate on player disconnect
+## if a player disconnects, they will be permanently
+## eliminated from the game
+scoreboard players set eliminate_on_disconnect global 0
 
-scoreboard players set timer_enabled global 0
-scoreboard objectives add alive_players dummy
-scoreboard objectives modify alive_players displayname {"text":"Lava Rising","color":"red","bold":true}
-bossbar add lavarising:period {"text":""}
-bossbar set lavarising:period players @a
 
-# Create Admin + Spectator team
-team add admin
-team add spectator
-
-worldborder set 10
-gamemode adventure @a
-effect give @a weakness 9999 255 true
-effect give @a resistance 9999 255 true
-effect give @a regeneration 9999 255 true
-
-# Teams
-scoreboard players reset alive alive_players
-scoreboard players reset red alive_players
-scoreboard players reset blue alive_players
-scoreboard players reset green alive_players
-# Create Teams
-# Team 1
-team add red
-team modify red color red
-team modify red friendlyFire false
-# Team 2
-team add blue
-team modify blue color aqua
-team modify blue friendlyFire false
-# Team 3 (only when 3v3v3 is set to 1)
-team add green
-team modify green color green
-team modify green friendlyFire false
-# Add scoreboards for teams
-scoreboard objectives add red_team dummy
-scoreboard objectives add blue_team dummy
-scoreboard objectives add green_team dummy
-scoreboard objectives modify red_team displayname [{"text":"Lava Rising","color":"gold","bold":true},{"text":" (red)","color":"red","bold":true}]
-scoreboard objectives modify blue_team displayname [{"text":"Lava Rising","color":"gold","bold":true},{"text":" (blue)","color":"aqua","bold":true}]
-scoreboard objectives modify green_team displayname [{"text":"Lava Rising","color":"gold","bold":true},{"text":" (green)","color":"green","bold":true}]
-
-difficulty peaceful
-
-scoreboard players set defaults global 1
+scoreboard players set defaults internal 1

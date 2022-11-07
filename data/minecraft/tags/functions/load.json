@@ -1,6 +1,5 @@
 {
     "values": [
-      "lavarising:prepare" 
-     ] 
-  }
-  
+        "lavarising:load"
+    ]
+}

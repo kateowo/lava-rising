@@ -1,1 +1,0 @@
-worldborder set 80 2350

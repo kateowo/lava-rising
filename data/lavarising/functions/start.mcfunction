@@ -1,25 +1,33 @@
-kill @e[tag=riser]
-## 1.18
-execute unless score legacy global matches 1.. unless entity @e[tag=riser] run summon armor_stand 0 -64 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["riser"]}
-## 1.17
-execute if score legacy global matches 1.. unless entity @e[tag=riser] run summon armor_stand 0 0 0 {NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["riser"]}
+# LAVARISING start
 
-scoreboard players set time time 0
-scoreboard players set time_seconds time 0
-scoreboard players set timer_enabled global 1
-execute as @a[gamemode=!spectator] run scoreboard players add alive alive_players 1
 
-execute as @a at @s run playsound minecraft:entity.generic.explode player @s ~ ~ ~ 100 1.5
-title @a title {"text":"Let the games begin!","color":"green","bold":true}
-title @a subtitle {"text":"PvP will be enabled in 4 minutes, make sure you're ready!","color":"white"}
+scoreboard players set can_start internal 0
+scoreboard players set can_start_players internal 0
+scoreboard players set can_start_period internal 0
+scoreboard players set can_start_teams internal 0
 
-function lavarising:starter_period
+# player check
+function fm:players/count
+execute if score players internal matches 2.. run scoreboard players set can_start_players internal 1
+execute unless score can_start_players internal matches 1.. run tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Cannot start, at least 2 players required.","color":"red"}]
+# team check
+execute unless score teams global matches 1.. run scoreboard players set can_start_teams internal 1
+## 2 teams
+execute if score teams global matches 1.. if score teams_count global matches ..2 if entity @a[team=red] if entity @a[team=blue] unless entity @a[team=!red,team=!blue] run scoreboard players set can_start_teams internal 1
+execute if score teams global matches 1.. if score teams_count global matches ..2 unless score can_start_teams internal matches 1.. run tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Cannot start, teams are enabled but some players are not on either the red or blue teams.","color":"red"}]
+## 3 teams
+execute if score teams global matches 1.. if score teams_count global matches 3.. if entity @a[team=red] if entity @a[team=blue] if entity @a[team=green] unless entity @a[team=!red,team=!blue,team=!green] run scoreboard players set can_start_teams internal 1
+execute if score teams global matches 1.. if score teams_count global matches 3.. unless score can_start_teams internal matches 1.. run tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Cannot start, teams are enabled but some players are not on either the red, blue, or green teams.","color":"red"}]
+# period check
+execute if score period internal matches -1 run scoreboard players set can_start_period internal 1
+execute unless score can_start_period internal matches 1.. run tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"Cannot start, a game is already in progress.","color":"red"}]
 
-worldborder set 1000 10
-gamemode survival @a
-effect clear @a weakness
-effect clear @a regeneration
+execute if score can_start_players internal matches 1.. if score can_start_period internal matches 1.. if score can_start_teams internal matches 1.. run scoreboard players set can_start internal 1
+## debug!
+execute if score debug internal matches 77 run scoreboard players set can_start internal 1
 
-difficulty easy
-
-scoreboard players set enabled global 0
+# can start?
+## yes, proceed to main start
+execute if score can_start internal matches 1.. run function lavarising:start_c
+## no, ineligible
+execute unless score can_start internal matches 1.. run playsound minecraft:block.note_block.bass player @a

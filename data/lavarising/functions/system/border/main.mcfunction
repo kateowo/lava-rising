@@ -1,0 +1,1 @@
+worldborder set 20 1250
