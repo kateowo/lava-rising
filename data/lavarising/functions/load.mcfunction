@@ -40,4 +40,4 @@ team modify green color green
 
 
 # load defaults
-execute unless score defaults global matches 1.. run function lavarising:defaults
+execute unless score defaults internal matches 1.. run function lavarising:defaults
