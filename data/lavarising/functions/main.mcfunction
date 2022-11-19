@@ -32,7 +32,7 @@ execute if score legacy global matches 1.. if score rise_height_limit global mat
 # performance
 execute if score period internal matches 2 if score kill_all_falling_blocks global matches 1.. run kill @e[type=falling_block]
 # kill nearby falling blocks
-execute if score period internal matches 2 if score kill_nearby_falling_blocks global matches 1.. as @e[type=falling_block] run function lavarising:system/performance/nearby_blocks
+execute if score period internal matches 2 if score kill_nearby_falling_blocks global matches 1.. as @e[type=falling_block] at @s run function lavarising:system/performance/nearby_blocks
 
 # riser main
 execute if score period internal matches 2 as @e[tag=riser,limit=1] at @s run function lavarising:system/riser/main
