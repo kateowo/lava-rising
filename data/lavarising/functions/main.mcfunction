@@ -48,7 +48,7 @@ execute if score period internal matches 2 if score teams global matches 1.. as 
 execute if score period internal matches 2 if score teams global matches 1.. as @a[team=blue] at @s if score @s player.death matches 1.. run function lavarising:system/death/teams/go_blue
 execute if score period internal matches 2 if score teams global matches 1.. as @a[team=green] at @s if score @s player.death matches 1.. run function lavarising:system/death/teams/go_green
 ## reset
-execute unless score period internal matches 2 run scoreboard players reset @a player.death
+scoreboard players reset @a player.death
 
 # win checks
 ## solos
