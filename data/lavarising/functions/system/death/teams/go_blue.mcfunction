@@ -4,8 +4,6 @@
 
 # swap gamemode
 gamemode spectator @s
-scoreboard players remove alive internal 1
-scoreboard players remove alive_blue internal 1
 
 # announce
 tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"☠","color":"red"},{"text":"] ","color":"dark_gray"},{"selector":"@s","color":"blue","bold":true},{"text":" has been eliminated!","color":"dark_red"}]
