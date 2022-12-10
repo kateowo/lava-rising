@@ -40,6 +40,9 @@ execute if score period internal matches 2 as @e[tag=riser,limit=1] at @s run fu
 # time loop
 function lavarising:time
 
+# count players
+function lavarising:system/main/count
+
 # death checks
 ## solos
 execute if score period internal matches 2 unless score teams global matches 1.. as @a at @s if score @s player.death matches 1.. run function lavarising:system/death/solos/go
