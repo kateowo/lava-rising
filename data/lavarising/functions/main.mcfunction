@@ -41,7 +41,7 @@ execute if score period internal matches 2 as @e[tag=riser,limit=1] at @s run fu
 function lavarising:time
 
 # count players
-function lavarising:system/main/count
+execute if score period internal matches 2 if score eliminate_on_disconnect global matches 1.. run function lavarising:system/main/count
 
 # death checks
 ## solos
