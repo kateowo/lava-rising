@@ -16,6 +16,12 @@ execute if score teams global matches 1.. run tellraw @s ["",{"text":"Teams \u00
 ## disabled
 execute unless score teams global matches 1.. run tellraw @s ["",{"text":"Teams \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"Fight to the death together! Requires adding players to red/blue (or green if 3 teams)."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/teams/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
 
+# eliminate on disconnect
+## enabled
+execute if score eliminate_on_disconnect global matches 1.. run tellraw @s ["",{"text":"Eliminate on disconnect \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"If a player leaves the server, upon rejoin they will be eliminated."}]}},{"text":"[","color":"white"},{"text":"✔","color":"green","bold":true},{"text":"]","color":"white"},{"text":"  ","color":"dark_gray"},{"text":"X","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/eliminate_on_disconnect/off"}},{"text":" ","color":"dark_gray"}]
+## disabled
+execute unless score eliminate_on_disconnect global matches 1.. run tellraw @s ["",{"text":"Eliminate on disconnect \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"If a player leaves the server, upon rejoin they will be eliminated."}]}},{"text":" ","color":"dark_gray"},{"text":"✔","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/eliminate_on_disconnect/on"}},{"text":" ","color":"dark_gray"},{"text":" [","color":"white"},{"text":"X","color":"red","bold":true},{"text":"]","color":"white"}]
+
 # rise height limit
 tellraw @s ["",{"text":"Rise height limit \u0020 \u0020","hoverEvent":{"action":"show_text","contents":[{"text":"The maximum height limit the lava can reach."}]}},{"text":" ","color":"white"},{"text":"-","color":"red","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/rise_height_limit/down"}},{"text":"  ","color":"white"},{"score":{"name":"rise_height_limit","objective":"global"}},{"text":"  ","color":"dark_gray"},{"text":"+","color":"green","bold":true,"clickEvent":{"action":"run_command","value":"/function lavarising:setup/rise_height_limit/up"}},{"text":" ","color":"dark_gray"}]
 
