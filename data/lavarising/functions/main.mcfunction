@@ -40,6 +40,9 @@ execute if score period internal matches 2 as @e[tag=riser,limit=1] at @s run fu
 # time loop
 function lavarising:time
 
+# count players
+execute if score period internal matches 2 if score eliminate_on_disconnect global matches 1.. run function lavarising:system/main/count
+
 # death checks
 ## solos
 execute if score period internal matches 2 unless score teams global matches 1.. as @a at @s if score @s player.death matches 1.. run function lavarising:system/death/solos/go
@@ -58,8 +61,7 @@ execute if score period internal matches 2 if score teams global matches 1.. if 
 execute if score period internal matches 2 if score teams global matches 1.. if score teams_count global matches 3.. run function lavarising:system/win/teams-3/check
 
 # disconnect checks
-## disabled for now
-execute if score eliminate_on_disconnect global matches 1.. run tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"X","color":"red","bold":true},{"text":"] ","color":"dark_gray"},{"text":"This feature is disabled for now and not available.","color":"red"}]
-execute if score eliminate_on_disconnect global matches 1.. run scoreboard players set eliminate_on_disconnect global 0
 ## refer to 'eliminate_on_disconnect' in defaults
-execute if score period internal matches 2 if score eliminate_on_disconnect global matches 1.. if entity @a[scores={player.leave=1..}] run function lavarising:system/death/disconnect
+execute if score period internal matches 2 if score eliminate_on_disconnect global matches 1.. as @a if score @s player.leave matches 1.. run function lavarising:system/death/disconnect
+## reset (for people currently on the server)
+scoreboard players reset @a player.leave

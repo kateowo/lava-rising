@@ -4,8 +4,8 @@
 
 # swap gamemode
 gamemode spectator @s
-scoreboard players remove alive internal 1
-scoreboard players remove alive_green internal 1
+execute unless score eliminate_on_disconnect global matches 1.. run scoreboard players remove alive internal 1
+execute unless score eliminate_on_disconnect global matches 1.. run scoreboard players remove alive_green internal 1
 
 # announce
 tellraw @a ["",{"text":"[","color":"dark_gray"},{"text":"☠","color":"red"},{"text":"] ","color":"dark_gray"},{"selector":"@s","color":"green","bold":true},{"text":" has been eliminated!","color":"dark_red"}]
